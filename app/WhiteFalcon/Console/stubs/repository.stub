@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\ModelClass;
+
+class {{ class }} extends Repository
+{
+    /**
+     * @return class
+     */
+    public function model()
+    {
+        return ModelClass::class;
+    }
+}

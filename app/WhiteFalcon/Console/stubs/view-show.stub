@@ -1,0 +1,13 @@
+<h2 style="text-align:center;">Show {{ entitySingular }}</h2>
+<form action="{{route('{{ lcEntityPlural }}.index')}}" method="get">
+    <button type="submit">{{ entitySingular }} Index</button>
+</form>
+<div style="
+            width: 80%;
+            border: 2px dotted black;
+        "
+    >
+    @foreach (${{ lcEntitySingular }}->getAttributes() as $column => $value) 
+        <h3 style="padding-left: 50px;"><b>{{\str($column)->headline()}}:&nbsp;</b>{{$value}}</h3>
+    @endforeach
+</div>
